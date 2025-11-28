@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js + Cannon-es Traffic Racer</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: sans-serif; }
+        #canvas-container { width: 100vw; height: 100vh; display: block; }
+        #ui {
+            position: absolute; top: 20px; left: 20px; color: white;
+            text-shadow: 1px 1px 2px black; pointer-events: none;
+        }
+        .speed { font-size: 2rem; font-weight: bold; }
+        .instructions { font-size: 0.9rem; opacity: 0.8; }
+    </style>
+    <!-- Import Map: Kütüphaneleri buradan yöneteceğiz -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "cannon-es": "https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js",
+                "cannon-es-debugger": "https://unpkg.com/cannon-es-debugger@1.0.0/dist/cannon-es-debugger.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="ui">
+        <div class="speed">0 km/h</div>
+        <div class="instructions">WASD veya OK TUŞLARI ile sür</div>
+    </div>
+    <div id="canvas-container"></div>
+
+    <!-- Ana Script -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
